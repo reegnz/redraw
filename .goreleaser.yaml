@@ -1,0 +1,21 @@
+---
+before:
+  hooks:
+    - go mod tidy
+    - go fmt ./...
+    - go vet ./...
+    - go test ./...
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+    dir: .
+
+archives:
+  - replacements:
+      amd64: x86_64
