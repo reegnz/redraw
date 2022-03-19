@@ -11,12 +11,18 @@ data() {
 	echo "2 111 11"
 	sleep 1
 	echo "33333 211123 12313"
+	sleep 1
+	echo "11321321 211123 12313"
+	sleep 1
+	echo "1 6348343483499 12313"
+	sleep 1
+	echo "878732476234786213486 1 1"
 }
 
-# echo "1st test case: column"
-# echo "---------------------"
+echo "1st test case: column"
+echo "---------------------"
 
-# data | go run main.go column -t
+data | go run main.go column -t
 
 
 data2() {
@@ -43,9 +49,14 @@ cat <<EOF
 EOF
 }
 
-#echo "2nd test case: sort"
-#echo "-------------------"
+echo
+echo "2nd test case: sort"
+echo "-------------------"
 
-#data2 | go run main.go sort -n
+data2 | go run main.go sort -n
 
-data
+
+echo
+echo "3nd test case: wc"
+echo "-------------------"
+data | go run main.go wc
