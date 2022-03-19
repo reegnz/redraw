@@ -1,7 +1,8 @@
-
 # redraw
 
 An interactive terminal tool to filter and redraw output continuously.
+
+[![asciicast](https://asciinema.org/a/478249.svg)](https://asciinema.org/a/478249)
 
 I was frustrated with terminal commands like `column`, `sort`, `wc` not
 showing any output until they encounter an EOF. So I wrote `redraw` to run
